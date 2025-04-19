@@ -12,13 +12,13 @@
 <link rel="stylesheet" href="https://ballboyDev.github.io/_assets/skin.css">
 
 <style>
-    #p-5 {
+    #p-13 {
         color: rgb(76, 193, 237) !important;
     }
 </style>
 <script id="data" type="application/json">
 {
-    "fold": ["2","21"]
+    "fold": ["1","11"]
 }
 </script>
 
@@ -138,120 +138,59 @@
         <div id="contents">
             
             
+<a href="https://ballboyDev.github.io/post/10.html" class="prev post">
+    <img src="https://ballboyDev.github.io/assets/img/prev.svg" alt="" srcset="">
+</a>
+    
             
             
+<a href="https://ballboyDev.github.io/post/16.html" class="next post">
+    <img src="https://ballboyDev.github.io/assets/img/next.svg" alt="" srcset="">
+</a>
+    
             
             <div class="main markdown-body">
 
-                <h1>겉절이 김치 만들기</h1>
-<pre><code>역시 한국인은 김치 없이는 안된다.
-항상 고향의 어무이한테 김치를 얻어 먹었다. 하지만 역시 어머니의 마음이란...
-맛있는 김치를 정말 많이 보내주시는데 직장인이 집에서 밥을 얼마나 자주 먹겠나...
-금방 김치는 쉬어 버리고 반찬으로 먹기 힘들어 진다.
-그래서 아들 집에 놀러오신 엄마를 붙잡고 김장...은 아니고 겉절이 김치를 배워 보았다.
-역시 한국인은 김치 없이는 안된다.
-</code></pre>
-<p><img src="../../_assets/img/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%A4%80%EB%B9%84%EC%A4%91.png" alt="이미지 준비중"></p>
-<h3>난이도 ✭✭✭</h3>
-<blockquote>
-<p>역시 한국인은 김치 없이는 안된다.</p>
-</blockquote>
-<h2>재료</h2>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">재료명</th>
-<th align="left">용량(개수)</th>
-<th align="left">비고</th>
-<th align="left">양념(조미료)</th>
-<th align="left">용량(개수)</th>
-<th align="left">비고</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="left">알배추</td>
-<td align="left">1통</td>
-<td align="left"></td>
-<td align="left">고추가루</td>
-<td align="left">4sp</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="left">다진 마늘</td>
-<td align="left">2sp</td>
-<td align="left"></td>
-<td align="left">액젓</td>
-<td align="left">3sp</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="left">쪽파 or 대파</td>
-<td align="left">적당량</td>
-<td align="left"></td>
-<td align="left">생강청</td>
-<td align="left">0.5sp</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">매실청</td>
-<td align="left">0.5sp</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">설탕</td>
-<td align="left">0.5sp</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">6</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">굵은 소금</td>
-<td align="left">한 주먹</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h2>레시피</h2>
-<ol>
-<li><p>알배추의 잎을 따서 먹기 적당한 크기로 자른다.</p>
-</li>
-<li><p>썰은 배추 잎을 물에 헹구고 굵은 소금 1주먹과 깨끗한 물을 넣고 30분간 배춧잎을 절인다.</p>
+                <h1>1. 블로그 만들기 - 폴더 탐색</h1>
+<p>github page에 블로그 제작을 기획하며 핵심 기능으로 2가지를 생각했다.
+그중 하나가 폴더 탐색이다. 폴더 탐색은 폴더에 트리 구조로 작성되는 포스팅들을 하나 씩 탐색하는 것으로 폴더와 파일을 탐색하며 네비게이션 생성과 포스팅 변환 등의 작업을 진행한다.</p>
+<h2>트리 탐색</h2>
 <ul>
-<li>소금음 물에 푸었을때 오우ㅆ... 할 정도?</li>
-<li>15분쯤에 한번 뒤집어 골고루 절일 수 있도록 한다.</li>
+<li>사실 폴더 탐색이라고 했지만 개념은 자료구조의 기초인 트리 탐색을 활용한 기능이다.
+트리 탐색에는 전위, 중위, 후위 순회등 다양한 방법이 있지만 해당 블로그에서는 전위 순회 방식을 사용하여 폴더와 파일을 탐색하며 작업을 진행한다. 전위순회는 부모 노드에서 자식 노드 방향으로 탐색을 진행하는 방식으로 구현방법 재귀 함수로 간편하고 폴더의 구조를 네비게이션 디자인을 구조화 하기에 적합하기에 선택하게 되었다.</li>
 </ul>
-</li>
-<li><p>쪽파나 대파를 3 ~ 4cm 정도로 채썰어 준다,</p>
-</li>
-<li><p>30분 후 배추가 절여졌으면 물을 버리고 채썬 파와 아래 양념을 모두 넣고 버무린다.</p>
+<h3>코드 분석</h3>
 <ul>
-<li>고추가루, 액젓, 생강청, 매실청, 설탕</li>
+<li>마크다운으로 작성되어 있는 포스팅 폴더를 root부터 전위 순회 방식으로 탐색하며 포스팅 파일을 찾으면 작업을 시작한다.</li>
 </ul>
-</li>
-<li><p>버무린 다음 색과 간에 따라 고춧가루와 액젓을 넣어 간을 맞춘다. </p>
-</li>
-<li><p>다 버무린 다음 김치는 통에 눌어 담는다.</p>
-</li>
-<li><p>맛잇게 먹는다.</p>
-</li>
-</ol>
-<pre><code>&gt;&gt; 자취생 평가 &lt;&lt;
+<pre><code class="language-js">const treeTraver = (root) =&gt; {
+    // root에 있는 폴더와 파일의 리스트
+    const node = fs.readdirSync(root)
 
-겉절이 인데 익으니가 그냥 김치랑 똑같아 지더라
+    // 폴더와 파일 리스트를 순차적으로 확인하며 폴더일 경우와 파일인 경우에 따른 기능 개발
+    node.map((v) =&gt; {
+        const isDir = fs.statSync(`${root}/${v}`).isDirectory()
+
+        if(isDir) {
+            // 폴더 인 경우 해당 폴더를 root로 또 다시 내부 아이템 분석
+            treeTraver(`${root}/${v}`)
+        } else {
+            // 파일일 경우 파일 내용 변환 및 네이게이션 작성
+            const contents = fs.readFileSync(`${root}/${v}`, &#39;utf8&#39;)
+
+            const naviCode = `&lt;a href=&quot;url&quot;&gt;${v}&lt;/a&gt;`
+        }
+    })
+
+}
+
+// 포스팅이 작성되어 있는 root 폴더의 경로
+treeTraver(&#39;/post&#39;)
 </code></pre>
+<ul>
+<li>사실 코드 자체의 원리는 어렵지 않다. 본 블로그에서는 이 코드를 기반으로 파일의 내용을 변환하고 네비게이션 사이드바를 제작하는 코드를 추가하여 제작되었다.
+이 블로그를 제작할때 핵심 테마인 &#39;마크다운으로 작성하고 폴더 구조 기반으로 웹 페이지로의 변환한다.&#39;에 맞춰 폴더를 순회하며 모든 작업을 진행한다.</li>
+</ul>
 
 
             </div>
